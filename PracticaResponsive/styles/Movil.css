@@ -1,0 +1,147 @@
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: Arial, sans-serif;
+}
+
+header {
+    background-color: #333;
+    color: white;
+    padding: 2rem;
+    position:fixed;
+    width: 100%;
+    display: inline;
+}
+
+header h1 {
+    font-size: 2rem;
+    border-width: 10%;
+    padding: auto 0;
+    display: block;
+    block-size: 100%;
+    text-align: center;
+}
+
+
+img  {
+    width: 200px;
+    height: auto;
+    margin-right: 1rem;
+    justify-content: left;
+}
+
+
+nav {
+    background-color: #4b4b4b;
+    color: white;
+    padding: 1rem;
+}
+
+nav ul {
+    list-style: none;
+    display: flex;
+    justify-content: center;
+    padding: 5%;
+    margin-inline: 10%;
+}
+ 
+ .Main {
+    background-color: #5a5a5a;
+    padding-top: 5%;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+}
+
+nav ul a img{
+    margin: 0 1rem;
+    border-style: solid;
+    border-width: 50%;
+    border-color: white;
+    padding: 1%;
+    width: 300px;
+    height: auto;
+    transition: transform 0.1s case;
+    opacity: 50%;
+}
+nav ul a img:hover {
+    transform: scale(1.2);
+    opacity: 100%;
+}
+
+.productos {
+    display: grid;
+    grid-template-columns: 1fr 1fr; /* Dos columnas iguales */
+    gap: 1rem; /* Espacio entre los artículos */
+    justify-content: center;
+    align-items: center;
+    justify-items: center;
+}
+
+.productos article {
+    display: grid;
+    grid-template-columns: 1fr 1fr; /* Imagen en la primera columna, texto en la segunda */
+    border: 1px solid #000000;
+    padding: 1rem;
+    margin: 2rem ;
+    align-items: center; 
+    gap: auto;
+}
+
+.productos article div {
+    text-align: left;
+    padding: 5%;
+}
+
+.productos article img {
+    width: 100px; 
+    height: auto;
+    border: 1px solid #000;
+}
+
+
+footer {
+    background-color: #333;
+    color: white;
+    text-align: center;
+    padding: 1rem;
+    position:static;
+    width: 100%;
+    bottom: 4%;
+}
+
+
+
+/* Móvil */
+@media (max-width: 768px) {
+    .productos article {
+        width: 100%;
+    }
+
+    nav ul {
+        flex-direction: column;
+    }
+
+    nav ul li {
+        margin: 0.5rem 0;
+    }
+}
+
+/* Tableta */
+@media (min-width: 769px) and (max-width: 1024px) {
+    .productos article {
+        width: 45%;
+    }
+}
+
+/* Escritorio */
+@media (min-width: 1025px) {
+    .productos article {
+        width: 30%;
+    }
+}
